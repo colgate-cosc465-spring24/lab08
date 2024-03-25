@@ -2,7 +2,7 @@
 
 from argparse import ArgumentParser
 import logging
-import sliding_window
+import stop_and_wait
 
 def main():
     # Parse arguments
@@ -18,7 +18,7 @@ def main():
     logging.basicConfig(level=logging.DEBUG, 
             format='%(levelname)s: %(message)s')
 
-    receiver = sliding_window.Receiver((settings.hostname, settings.port), 
+    receiver = stop_and_wait.Receiver((settings.hostname, settings.port),
             settings.loss_probability)
     while True:
         data = receiver.recv().decode()

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from argparse import ArgumentParser
-import sliding_window
+import stop_and_wait
 import logging
 import sys
 
@@ -19,7 +19,7 @@ def main():
     logging.basicConfig(level=logging.DEBUG, 
             format='%(levelname)s: %(message)s')
         
-    sender = sliding_window.Sender((settings.hostname, settings.port), 
+    sender = stop_and_wait.Sender((settings.hostname, settings.port), 
             settings.loss_probability)
 
     for line in sys.stdin:
