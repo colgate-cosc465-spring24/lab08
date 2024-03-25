@@ -66,5 +66,6 @@ replacing `PORT` with the port number you specified when you started the server.
 
 To test your retransmission code, include the command line argument `-l PROBABILITY` (that is a lowercase L) when you start the client and/or the server. Replace `PROBABILITY` with a decimal number between `0.0` to `1.0` (inclusive), indicting the probability that a packet is dropped. If you pass this option to the client, then packets may be dropped. If you pass this option to the server, then ACK packets may be dropped.
 
-## Submission instructions
-When you are done,  you should commit and push your modified `stop_and_wait.py` file to GitHub.
+## Self-assessment
+The self-assessment for this lab will be available on Moodle on Friday, March 29th. Please complete the self-assessment by 11pm on Monday, April 1st.
+
