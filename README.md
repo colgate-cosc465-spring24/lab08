@@ -14,7 +14,7 @@ Clone your git repository on a `tigers` server.
 As you work on this lab, you may want to consult [Section 2.5.1](https://book.systemsapproach.org/direct/reliable.html#stop-and-wait) of _Computer Networks: A Systems Approach_.
 
 ### Packets
-The `Packet` class defined in `sliding_window.py` is used to represent a data or acknowledgement (ACK) packet. Every packet contains:
+The `Packet` class defined in `stop_and_wait.py` is used to represent a data or acknowledgement (ACK) packet. Every packet contains:
 * The character `D` or `A`, which indicates whether it is a <span style="text-decoration:underline;">D</span>ata or <span style="text-decoration:underline;">A</span>CK packet
 * A sequence number
 * Up to 1400 bytes of data (only in data packets)
@@ -24,7 +24,7 @@ This object-based representation of a packet can be converted to a sequence of b
 The sender and receiver both interact with a simple lower layer protocol that sends and receives packets across the network on behalf of the sliding window ARQ protocol. The `LowerLayerEndpoint` class in `lower_layer.py` exposes a basic API for sending and receiving a packet—really just a sequence of bytes—to/from a "remote" endpoint.
 
 ## Implement sender
-You are responsible for implementing the sender side of a stop-and-wait ARQ protocol by completing the `Sender` class in `sliding_window.py`. 
+You are responsible for implementing the sender side of a stop-and-wait ARQ protocol by completing the `Sender` class in `stop_and_wait.py`. 
 
 The sender must do three things:
 1. Send a data packet. If there is already an outstanding unACK'd data packet, then the caller (e.g., an application) will be blocked until the outstanding data has been ACK'd.
