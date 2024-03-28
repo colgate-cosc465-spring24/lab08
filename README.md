@@ -21,7 +21,7 @@ The `Packet` class defined in `stop_and_wait.py` is used to represent a data or 
 
 This object-based representation of a packet can be converted to a sequence of bytes to be sent across the network using the `to_bytes` method. Conversely, a sequence of bytes received from the network can be converted to an object-based representation using the `Packet.from_bytes` method.
 
-The sender and receiver both interact with a simple lower layer protocol that sends and receives packets across the network on behalf of the sliding window ARQ protocol. The `LowerLayerEndpoint` class in `lower_layer.py` exposes a basic API for sending and receiving a packet—really just a sequence of bytes—to/from a "remote" endpoint.
+The sender and receiver both interact with a simple lower layer protocol that sends and receives packets across the network on behalf of the stop-and-wait ARQ protocol. The `LowerLayerEndpoint` class in `lower_layer.py` exposes a basic API for sending and receiving a packet—really just a sequence of bytes—to/from a "remote" endpoint.
 
 ## Implement sender
 You are responsible for implementing the sender side of a stop-and-wait ARQ protocol by completing the `Sender` class in `stop_and_wait.py`. 
